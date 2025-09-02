@@ -15,7 +15,11 @@ Outlier detection is a fundamental task in data analytics, where fuzzy rough set
 ├── code/                                 # Source code
 │   └── GB_generation_with_idx.py         # Granular-ball generation
 │   └── KFGOD.py                          # Main entry point
+│   └── Example.csv                       # Example dataset
 ├── datasets/                             # Benchmark datasets used in the paper
+├── paper/                                # Original paper
+│   └── 2025_INF__A_Kernelized_Fuzzy_Approximation_Fusion_Model_with_Granular_ball_Computing_for_Outlier_Detection.pdf
+│   └── KFGOD_Framework.png
 └── README.md                             # Project readme
 ```
 
