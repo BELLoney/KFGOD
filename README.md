@@ -76,7 +76,7 @@ If you find KFGOD useful in your research, please consider citing:
 @article{li2025kfgod,
   title={KFGOD: Kernelized Fuzzy Approximation Fusion with Granular-ball Computing for Outlier Detection},
   author={Li, Yongxiang and Su, Xinyu and Yuan, zhong and Ye, Run and Peng, Dezhong and Chen, Hongmei},
-  journal={Information},
+  journal={Information Fusion},
   year={2025},
 }
 ```
