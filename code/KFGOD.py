@@ -53,17 +53,11 @@ def KFGOD(data, delta):
         GOD[:, col] = 1 - (Acc_A_a[:, col]) * weight1[:, col]
 
     OD_gb = np.array(np.mean(GOD * weight2, axis=1))
-    
-    '''Map to samples'''
-    OD = np.zeros(n)
-    for idx, gb in enumerate(GBs):
-        point_idxs = gb[:,-1].astype('int')
-        OD[point_idxs] = OD_gb[idx]
-    return OD
+    return OD_gb
 
 
 if __name__ == "__main__":
-    data = pd.read_csv("./annthyroid.csv").values
+    data = pd.read_csv("./Example.csv").values
     X = data[:, :-1]
     n, m = X.shape
     labels = data[:, -1]
@@ -75,10 +69,18 @@ if __name__ == "__main__":
 
     GBs = get_GB(X)
     n_gb = len(GBs)
+    print(f"The number of Granular-ball: {n_gb}")
+    
     centers = np.zeros((n_gb, m))
     for idx, gb in enumerate(GBs):
         centers[idx] = np.mean(gb[:,:-1], axis=0)
         
     delta = 0.3
-    outlier_degrees = KFGOD(centers, delta)
-    print(outlier_degrees)
+    OD_gb = KFGOD(centers, delta)
+    
+    '''Map to samples'''
+    OD = np.zeros(n)
+    for idx, gb in enumerate(GBs):
+        point_idxs = gb[:,-1].astype('int')
+        OD[point_idxs] = OD_gb[idx]
+    print(OD_gb)
