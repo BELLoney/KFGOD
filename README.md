@@ -1,6 +1,6 @@
 # KFGOD: Kernelized Fuzzy Approximation Fusion with Granular-ball Computing for Outlier Detection
 
-This repository provides the official implementation of the following paper:
+This repository provides the official implementation of the following paper (Information Fusion, 2025, accept):
 
 > **A Kernelized Fuzzy Approximation Fusion Model with Granular-ball Computing for Outlier Detection**  
 > Yongxiang Li, Xinyu Su, Zhong Yuan, Run Ye, Dezhong Peng, Hongmei Chen
